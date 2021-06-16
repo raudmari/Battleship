@@ -6,7 +6,9 @@ public class AppMain {
         SwingUtilities.invokeLater(() -> {
             Model model = new Model(); // teeb mudeli
             View view = new View(model); // Teeb vaade JFrame
+            Controller controller = new Controller(model, view);
 
+            view.registerGameBoardMouse(controller); //Hiire funktisonaalsus
 
 
             view.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
